@@ -196,6 +196,15 @@
 
         }
     </style>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "6a5e485c-ad48-4c39-89c7-e9570ff3b215",
+    });
+  });
+</script>
 </head>
 
 <body>
@@ -210,7 +219,7 @@
             <div>
                 <img alt="Enter The" src="assets/Enter%20the2.svg" />
                 <img alt="%th Dimension" src="assets/5d_logo_BB.svg" />
-                <div style="display: flex"> <a class="btnP">Get Notified</a><a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
+                <div style="display: flex"> <div class='onesignal-customlink-container'></div><a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
             </div>
         </section>
     </div>
