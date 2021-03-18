@@ -18,8 +18,9 @@
     <meta property="og:site_name" content="5TH DIMENSION" />
     <meta property="og:type" content="website" /> <!-- website is deafult -->
     <meta property="og:locale" content="en_US" /> <!-- en_US is deafult -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
 
-   
 
 
     <!--  Favicons: -->
@@ -42,6 +43,7 @@
         * {
             box-sizing: border-box;
             clear: both;
+            flex-shrink: 1;
         }
 
         body {
@@ -53,15 +55,16 @@
             padding: 0;
             overflow: hidden;
             max-height: -webkit-fill-available;
-/*            border: 16px solid black;*/
+            border: 16px solid black;
             /* background: url('assets/background.png');
             background-size: cover; */
+            font-family: 'DM Sans', sans-serif;
         }
 
         #container {
             height: 100%;
             width: 100%;
-            display: block;
+            display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
@@ -73,7 +76,8 @@
             -o-user-select: none;
         }
 
-        img {
+        img,
+        video {
             height: auto;
             max-width: 100%;
             max-height: 100%;
@@ -101,161 +105,114 @@
             will-change: transform;
         }
 
-
-        #logo {
-            height: 40px;
-            flex-grow: 0;
-            width: auto;
-        }
-        
-        #enter {
-          height: 25px;
-          flex-grow: 0;
-            width: auto;
-        }
-
-        #frame {}
-
-        #painting {}
-
-        #veil {
-            height: 100vh;
-            width: 100vw;
-            background: white;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 100;
-            pointer-events: none;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
- 
-
-        .at {
-            font-size: 1.5rem;
-            line-height: 1rem;
-        }
-
-        video {
-            max-height: 100%;
-            max-width: 100%;
-        }
-        
-        
-        #hold{
-            width: 100%;
+        #heroImage {
+            background: black;
+            width: 60%;
             height: 100%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        .imgCont{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+        }
+
+        #content {
+            background: white;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              padding: 0 4rem 0 2.5rem;
+        }
+
+        #content>div>* {
+            margin-bottom: 2.5rem;
         }
         
-          @media (max-aspect-ratio: 5/5) {
+        
+        button, a {
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 11px 24px;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.1s ease-out;
+            box-shadow: 0px 0px 10px -6px #a5a5a5;
+        }
+        
+        a:hover{
+            transform: translateY(-3px);
+            cursor: pointer;
+            box-shadow: 1px 5px 10px -6px #a5a5a5;
+        }
+
+        .btnP {
+            background: #00070E;
+            border: none;
+            color: white;
+        }
+
+        .btnS {
+            margin-left: 1rem;
+            border: 2px solid #00070E;
+            background: white;
+            color: #00070E !important;
+            text-decoration: none;
             
-            #hold{
+        }
+
+        @media (min-aspect-ratio: 6/5) {}
+
+        @media (max-aspect-ratio: 6/5) {
+            #container {
                 flex-direction: column;
-              }
-        .imgCont{
-             height: 40%;
-              }
+            }
+
+            #heroImage {
+                width: 100%;
+                height: 60%;
+            }
+
+            #content {
+                width: 100%;
+                height: 40%;
+                align-items: flex-end;
+                justify-content: flex-start;
+               padding:0 2.5rem;
+            }
+            
+            #content>div>* {
+            margin-bottom: 1.5rem;
+        }
+/*
+            #content > div{
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+                justify-content: flex-start;
+        }
+*/
+
         }
     </style>
 </head>
 
 <body>
-    <div id="veil"></div>
-    <div id="hold">
-    <div class="imgCont"><img width="2803" id="enter" src='assets/Enter%20the.svg'></div>
-    <section id="container" data-tilt-full-page-listening>
-        <div class="centered" style="transform: translate(-50%, -50%) translateZ(-100px)"><video autoplay muted loop>
-                <source src="assets/astro.mp4" alt="Spinning gif of an astronaut" type="video/mp4">
-            </video></div>
+    <div id="container">
+        <section id="heroImage">
+            <video autoplay muted loop>
+                <source src="assets/astronaut.mp4" alt="Spinning gif of an astronaut" type="video/mp4">
+            </video>
+        </section>
 
+        <section id="content">
+            <div>
+                <img height="2" src="assets/Enter%20the.svg" />
+                <img src="assets/5d_logo_BB.svg" />
+                <div style="display: flex"> <a class="btnP">Get Notified</a><a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
+            </div>
+        </section>
+    </div>
 
-        <div class="centered" style="transform: translate(-50%, -50%) translateZ(0px)"><img id="frame" src='assets/frame_crop-compress-min.png'></div>
-        <div class="centered" style="transform: translate(-50%, -50%) translateZ(-30px)scale(1.04); filter: brightness(0.95);"><img id="frame" src='assets/frame_crop-compress-min.png'></div>
-        <div class="centered" style="transform: translate(-50%, -50%) translateZ(-15px)scale(1.02); filter: brightness(0.9);"><img id="frame" src='assets/frame_crop-compress-min.png'></div>
-
-       
-    
-
-
-
-
-
-    </section>
-            
-        <div class="imgCont"><img width="2803" id="logo" src='assets/5d_logo.svg'></div>
-</div>
-    <script type="text/javascript" src="assets/vanilla-tilt.min.js"></script>
-    <script type="text/javascript">
-        var maxTilt = 5;
-        if (navigator.userAgent.match(/Android/i) ||
-            navigator.userAgent.match(/webOS/i) ||
-            navigator.userAgent.match(/iPhone/i) ||
-            navigator.userAgent.match(/iPad/i) ||
-            navigator.userAgent.match(/iPod/i) ||
-            navigator.userAgent.match(/BlackBerry/i) ||
-            navigator.userAgent.match(/Windows Phone/i)) {
-            maxTilt = 7;
-        }
-
-        VanillaTilt.init(document.querySelector("#container"), {
-            max: maxTilt,
-            speed: 1000,
-            glare: true,
-            "max-glare": 0.1,
-            reverse: false,
-            gyroscope: true,
-            gyroscopeMinAngleX: -25,
-            gyroscopeMaxAngleX: 25,
-            gyroscopeMinAngleY: -25,
-            gyroscopeMaxAngleY: 25,
-            perspective: 1000,
-            scale: 1,
-            startX: 0.1,
-        });
-
-
-        function fadeOutEffect() {
-            var fadeTarget = document.getElementById("veil");
-            var fadeEffect = setInterval(function() {
-                if (!fadeTarget.style.opacity) {
-                    fadeTarget.style.opacity = 1;
-                }
-                if (fadeTarget.style.opacity > 0) {
-                    fadeTarget.style.opacity -= 0.1;
-                } else {
-                    clearInterval(fadeEffect);
-                }
-            }, 50);
-        }
-
-        function timeFunction() {
-            setTimeout(fadeOutEffect, 100);
-        }
-
-        function resetHeight() {
-            // reset the body height to that of the inner browser
-            document.body.style.height = window.innerHeight + "px";
-        }
-        // reset the height whenever the window's resized
-        window.addEventListener("resize", resetHeight);
-        // called to initially set the height.
-        resetHeight();
-
-        window.onload = timeFunction;
-    </script>
 </body></html>
