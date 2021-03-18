@@ -19,67 +19,7 @@
     <meta property="og:type" content="website" /> <!-- website is deafult -->
     <meta property="og:locale" content="en_US" /> <!-- en_US is deafult -->
 
-    <style>
-        * {
-            box-sizing: border-box;
-            clear: both;
-        }
-
-        body {
-            box-sizing: border-box;
-            position: relative;
-            height: 100vh;
-            width: 100vw;
-            margin: auto;
-            padding: 0;
-            overflow: hidden;
-            background: black;
-            padding: 2em;
-        }
-
-        #container {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            position: relative;
-        }
-
-        img {
-            height: auto;
-            width: 100%;
-            max-width: 100%;
-            max-height: 100%;
-            position: relative;
-            display: block;
-        }
-
-        .centered {
-            /*            max-height: 55vh;*/
-            max-width: 80vw;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            display: flex;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            justify-content: center;
-            align-items: center;
-            will-change: transform;
-        }
-        
-        #logo{
-            max-width: 200px;
-        }
-        
-        video{
-            min-height: 0;
-            height: 80%;
-        }
-    </style>
+   
 
 
     <!--  Favicons: -->
@@ -98,17 +38,222 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 
+    <style>
+        * {
+            box-sizing: border-box;
+            clear: both;
+        }
 
+        body {
+            box-sizing: border-box;
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            margin: auto;
+            padding: 0;
+            overflow: hidden;
+            max-height: -webkit-fill-available;
+            border: 16px solid black;
+        }
+
+        #container {
+            height: 100%;
+            width: 100%;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transform-style: preserve-3d;
+            user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -o-user-select: none;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+            display: block;
+            transform-style: preserve-3d user-select: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -o-user-select: none;
+        }
+
+        .centered {
+            max-height: 55vh;
+            max-width: 70vw;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            align-items: center;
+            will-change: transform;
+        }
+
+
+        #logo {
+            height: 40px;
+            flex-grow: 0;
+            width: auto;
+        }
+        
+        #enter {
+          height: 25px;
+          flex-grow: 0;
+            width: auto;
+        }
+
+        #frame {}
+
+        #painting {}
+
+        #veil {
+            height: 100vh;
+            width: 100vw;
+            background: white;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            pointer-events: none;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+ 
+
+        .at {
+            font-size: 1.5rem;
+            line-height: 1rem;
+        }
+
+        video {
+            max-height: 100%;
+            max-width: 100%;
+        }
+        
+        
+        #hold{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .imgCont{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+          @media (max-aspect-ratio: 5/5) {
+            
+            #hold{
+                flex-direction: column;
+              }
+        .imgCont{
+             height: 40%;
+              }
+        }
+    </style>
 </head>
 
-
 <body>
-    <section id="container">
-            <video autoplay muted loop>
-                <source src="assets/astronaut.MP4" alt="Spinning gif of an astronaut" type="video/mp4">
-            </video>
-        <img id="logo" alt="5th Dimension" src='assets/5d_logo_RW.svg'>
+    <div id="veil"></div>
+    <div id="hold">
+    <div class="imgCont"><img width="2803" id="enter" src='assets/Enter%20the.svg'></div>
+    <section id="container" data-tilt-full-page-listening>
+        <div class="centered" style="transform: translate(-50%, -50%) translateZ(-100px)"><video autoplay muted loop>
+                <source src="assets/astro.MP4" alt="Spinning gif of an astronaut" type="video/mp4">
+            </video></div>
+
+
+        <div class="centered" style="transform: translate(-50%, -50%) translateZ(0px)"><img id="frame" src='assets/frame_crop-compress-min.png'></div>
+        <div class="centered" style="transform: translate(-50%, -50%) translateZ(-30px)scale(1.04); filter: brightness(0.95);"><img id="frame" src='assets/frame_crop-compress-min.png'></div>
+        <div class="centered" style="transform: translate(-50%, -50%) translateZ(-15px)scale(1.02); filter: brightness(0.9);"><img id="frame" src='assets/frame_crop-compress-min.png'></div>
+
+       
+    
+
+
+
+
+
     </section>
+            
+        <div class="imgCont"><img width="2803" id="logo" src='assets/5d_logo.svg'></div>
+</div>
+    <script type="text/javascript" src="assets/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+        var maxTilt = 5;
+        if (navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/webOS/i) ||
+            navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/iPod/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/Windows Phone/i)) {
+            maxTilt = 7;
+        }
+
+        VanillaTilt.init(document.querySelector("#container"), {
+            max: maxTilt,
+            speed: 1000,
+            glare: true,
+            "max-glare": 0.1,
+            reverse: false,
+            gyroscope: true,
+            gyroscopeMinAngleX: -25,
+            gyroscopeMaxAngleX: 25,
+            gyroscopeMinAngleY: -25,
+            gyroscopeMaxAngleY: 25,
+            perspective: 1000,
+            scale: 1,
+            startX: 0.1,
+        });
 
 
+        function fadeOutEffect() {
+            var fadeTarget = document.getElementById("veil");
+            var fadeEffect = setInterval(function() {
+                if (!fadeTarget.style.opacity) {
+                    fadeTarget.style.opacity = 1;
+                }
+                if (fadeTarget.style.opacity > 0) {
+                    fadeTarget.style.opacity -= 0.1;
+                } else {
+                    clearInterval(fadeEffect);
+                }
+            }, 50);
+        }
+
+        function timeFunction() {
+            setTimeout(fadeOutEffect, 100);
+        }
+
+        function resetHeight() {
+            // reset the body height to that of the inner browser
+            document.body.style.height = window.innerHeight + "px";
+        }
+        // reset the height whenever the window's resized
+        window.addEventListener("resize", resetHeight);
+        // called to initially set the height.
+        resetHeight();
+
+        window.onload = timeFunction;
+    </script>
 </body></html>
