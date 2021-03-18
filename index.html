@@ -154,7 +154,7 @@
         }
 
         .btnS {
-            margin-left: 1rem;
+/*            margin-left: 1rem;*/
             border: 2px solid #00070E;
             background: white;
             color: #00070E !important;
@@ -163,6 +163,13 @@
         }
 
         @media (min-aspect-ratio: 6/5) {}
+
+        @media (max-width: 600px){
+            body{
+                border: 0;
+            }
+        }
+
 
         @media (max-aspect-ratio: 6/5) {
             #container {
@@ -195,16 +202,31 @@
 */
 
         }
+
+          @media (max-width: 600px) and  (max-aspect-ratio: 6/5){
+            body{
+                border: 0;
+            }
+
+              #content > div{
+                  height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+              }
+
+              #enter{
+                  max-height: 1.5rem;
+              }
+
+              #logo{
+                  max-height: 4rem;
+              }
+        }
+
     </style>
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "6a5e485c-ad48-4c39-89c7-e9570ff3b215",
-    });
-  });
-</script>
+
 </head>
 
 <body>
@@ -217,9 +239,9 @@
 
         <section id="content">
             <div>
-                <img alt="Enter The" src="assets/Enter%20the2.svg" />
-                <img alt="%th Dimension" src="assets/5d_logo_BB.svg" />
-                <div style="display: flex"> <div class='onesignal-customlink-container'></div><a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
+                <img id="enter" alt="Enter The" src="assets/Enter%20the2.svg" />
+                <img id="logo" alt="%th Dimension" src="assets/5d_logo_BB.svg" />
+                <div style="display: flex; margin-bottom: 0;"><a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
             </div>
         </section>
     </div>
