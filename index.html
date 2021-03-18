@@ -28,9 +28,9 @@
     <!-- For IE 10 and below: No link, just place a file called favicon.ico in the root directory -->
     <!-- For IE 11, Chrome, Firefox, Safari, Opera -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -139,9 +139,10 @@
             font-family: 'DM Sans', sans-serif;
             transition: all 0.1s ease-out;
             box-shadow: 0px 0px 10px -6px #a5a5a5;
+            text-decoration: none;
         }
         
-        a:hover{
+        button:hover, a:hover{
             transform: translateY(-3px);
             cursor: pointer;
             box-shadow: 1px 5px 10px -6px #a5a5a5;
@@ -154,11 +155,10 @@
         }
 
         .btnS {
-/*            margin-left: 1rem;*/
+            margin-left: 1rem;
             border: 2px solid #00070E;
             background: white;
             color: #00070E !important;
-            text-decoration: none;
             
         }
 
@@ -178,15 +178,15 @@
 
             #heroImage {
                 width: 100%;
-                height: 60%;
+                height: 100%;
             }
 
             #content {
                 width: 100%;
-                height: 40%;
-                align-items: flex-end;
+                height: auto;
+                align-items: center;
                 justify-content: flex-start;
-               padding:0 2.5rem;
+               padding:5rem 2.5rem;
             }
             
             #content>div>* {
@@ -233,7 +233,7 @@
     <div id="container">
         <section id="heroImage">
             <video autoplay muted loop>
-                <source src="assets/astronaut2.mp4" alt="Spinning gif of an astronaut" type="video/mp4">
+                <source src="assets/moonwalk.webm" alt="Spinning gif of an astronaut" type="video/webm">
             </video>
         </section>
 
@@ -241,7 +241,9 @@
             <div>
                 <img id="enter" alt="Enter The" src="assets/Enter%20the2.svg" />
                 <img id="logo" alt="%th Dimension" src="assets/5d_logo_BB.svg" />
-                <div style="display: flex; margin-bottom: 0;"><a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
+                <div style="display: flex; margin-bottom: 0;">
+                    <a target="/"href="https://twitter.com/Enter5D" class="btnP">Stay Updated</a>
+                    <a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
             </div>
         </section>
     </div>
