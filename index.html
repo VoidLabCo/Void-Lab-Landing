@@ -217,6 +217,10 @@
                 margin-bottom: 1.5rem;
             }
 
+             .buttons {
+                margin-bottom: 0rem !important;
+            }
+
             /*
             #content > div{
             display: flex;
@@ -264,8 +268,11 @@
 <body>
     <div id="container">
         <section id="heroImage">
-            <video autoplay muted loop>
-                <source src="assets/moonwalk.webm" alt="Spinning gif of an astronaut" type="video/webm">
+            <video alt="Spinning gif of an astronaut" poster="assets/poster.png" autoplay muted loop>
+                <source src="assets/moonwalk.webm"  type="video/webm">
+                <source src="assets/moonwalk.mp4"  type="video/mp4">
+                  Your browser does not support the video tag.
+
             </video>
         </section>
 
@@ -302,8 +309,8 @@
 
         function updateMangeWebPushSubscriptionButton(buttonSelector) {
             var hideWhenSubscribed = false;
-            var subscribeText = "Subscribe to Notifications";
-            var unsubscribeText = "Unsubscribe from Notifications";
+            var subscribeText = "Sub to Notifications";
+            var unsubscribeText = "Unsub from Notifications";
 
             getSubscriptionState().then(function(state) {
                 var buttonText = !state.isPushEnabled || state.isOptedOut ? subscribeText : unsubscribeText;
