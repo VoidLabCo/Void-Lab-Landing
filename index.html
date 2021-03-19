@@ -1,15 +1,12 @@
 <!doctype html>
 <html>
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>5TH DIMENSION</title>
     <meta name="description" content="Stay tuned">
-
 
     <!-- Facebook / OpenGraph -->
     <meta property="og:url" content="http://5D.co" />
@@ -18,19 +15,15 @@
     <meta property="og:site_name" content="5TH DIMENSION" />
     <meta property="og:type" content="website" /> <!-- website is deafult -->
     <meta property="og:locale" content="en_US" /> <!-- en_US is deafult -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
 
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
 
     <!--  Favicons: -->
-
-    <!-- For IE 10 and below: No link, just place a file called favicon.ico in the root directory -->
-    <!-- For IE 11, Chrome, Firefox, Safari, Opera -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -38,6 +31,37 @@
     <!--[if lt IE 9]>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "6a5e485c-ad48-4c39-89c7-e9570ff3b215",
+      notifyButton: {
+        enable: true,
+      },
+        promptOptions: {
+  customlink: {
+    enabled: true, /* Required to use the Custom Link */
+    style: "button", /* Has value of 'button' or 'link' */
+    size: "medium", /* One of 'small', 'medium', or 'large' */
+    color: {
+      button: '#00070E', /* Color of the button background if style = "button" */
+      text: '#FFFFFF', /* Color of the prompt's text */
+    },
+    text: {
+      subscribe: "Subscribe to updates", /* Prompt's text when not subscribed */
+      unsubscribe: "Unsubscribe from updates", /* Prompt's text when subscribed */
+//      explanation: "Get updates from all sorts of things that matter to you", /* Optional text appearing before the prompt button */
+    },
+    unsubscribeEnabled: true, /* Controls whether the prompt is visible after subscription */
+  }
+}
+    });
+  });
+
+</script>
 
     <style>
         * {
@@ -121,15 +145,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-              padding: 0 4rem 0 2.5rem;
+            padding: 0 4rem 0 2.5rem;
         }
 
         #content>div>* {
             margin-bottom: 2.5rem;
         }
-        
-        
-        button, a {
+
+
+        button,
+        a {
             border-radius: 4px;
             display: flex;
             flex-direction: column;
@@ -141,8 +166,9 @@
             box-shadow: 0px 0px 10px -6px #a5a5a5;
             text-decoration: none;
         }
-        
-        button:hover, a:hover{
+
+        button:hover,
+        a:hover {
             transform: translateY(-3px);
             cursor: pointer;
             box-shadow: 1px 5px 10px -6px #a5a5a5;
@@ -159,13 +185,13 @@
             border: 2px solid #00070E;
             background: white;
             color: #00070E !important;
-            
+
         }
 
         @media (min-aspect-ratio: 6/5) {}
 
-        @media (max-width: 600px){
-            body{
+        @media (max-width: 600px) {
+            body {
                 border: 0;
             }
         }
@@ -186,13 +212,14 @@
                 height: auto;
                 align-items: center;
                 justify-content: flex-start;
-               padding:5rem 2.5rem;
+                padding: 5rem 2.5rem;
             }
-            
+
             #content>div>* {
-            margin-bottom: 1.5rem;
-        }
-/*
+                margin-bottom: 1.5rem;
+            }
+
+            /*
             #content > div{
             display: flex;
             flex-direction: column;
@@ -203,30 +230,28 @@
 
         }
 
-          @media (max-width: 600px) and  (max-aspect-ratio: 6/5){
-            body{
+        @media (max-width: 600px) and (max-aspect-ratio: 6/5) {
+            body {
                 border: 0;
             }
 
-              #content > div{
-                  height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-              }
+            #content>div {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
 
-              #enter{
-                  max-height: 1.5rem;
-              }
+            #enter {
+                max-height: 1.5rem;
+            }
 
-              #logo{
-                  max-height: 4rem;
-              }
+            #logo {
+                max-height: 4rem;
+            }
         }
-
     </style>
-
 </head>
 
 <body>
@@ -240,12 +265,12 @@
         <section id="content">
             <div>
                 <img id="enter" alt="Enter The" src="assets/Enter%20the2.svg" />
-                <img id="logo" alt="%th Dimension" src="assets/5d_logo_BB.svg" />
+                <img id="logo" alt="5th Dimension" src="assets/5d_logo_BB.svg" />
                 <div style="display: flex; margin-bottom: 0;">
-                    <a target="/"href="https://twitter.com/Enter5D" class="btnP">Stay Updated</a>
-                    <a target="/"href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
+                    <div class='onesignal-customlink-container'></div>
+                    <a target="/" href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
             </div>
         </section>
     </div>
-
-</body></html>
+</body>
+</html>
