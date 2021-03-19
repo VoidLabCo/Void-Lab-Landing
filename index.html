@@ -214,7 +214,15 @@
             }
 
             #content>div>* {
-                margin-bottom: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+              #enter {
+                max-height: 1.5rem;
+            }
+
+            #logo {
+                max-height: 4rem;
             }
 
              .buttons {
@@ -262,6 +270,10 @@
                 max-height: 4rem;
             }
         }
+
+        video::-internal-media-controls-overlay-cast-button {
+    display: none;
+}
     </style>
 </head>
 
@@ -278,7 +290,7 @@
 
         <section id="content">
             <div>
-                <img id="enter" alt="Enter The" src="assets/Enter%20the2.svg" />
+                <img id="enter" alt="Enter The" src="assets/Enter%20the.svg" />
                 <img id="logo" alt="5th Dimension" src="assets/5d_logo_BB.svg" />
                 <div class="buttons">
                     <a href="#" id="my-notification-button" class="btnP">Sub to Notifications</a>
