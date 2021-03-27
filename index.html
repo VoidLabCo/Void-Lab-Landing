@@ -18,6 +18,9 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link href="assets/countdown.min.js" rel="script">
 
     <!--  Favicons: -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -32,8 +35,6 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 
-  
-
     <style>
         * {
             box-sizing: border-box;
@@ -42,7 +43,9 @@
         }
 
         html{
-            background: white;
+            height: 100%;
+    width: 100%;
+    overflow: hidden;
         }
 
         body {
@@ -54,10 +57,13 @@
             padding: 0;
             overflow: hidden;
             max-height: -webkit-fill-available;
-            border: 16px solid #010001;
+            /* border: 16px solid #010001; */
+            background: #010001;
+            padding: 3rem;
             /* background: url('assets/background.png');
             background-size: cover; */
             font-family: 'DM Sans', sans-serif;
+           
         }
 
         #container {
@@ -102,6 +108,7 @@
             justify-content: center;
             align-items: center;
             will-change: transform;
+            color: white;;
         }
 
         #heroImage {
@@ -115,14 +122,16 @@
         }
 
         #content {
-            background: white;
             width: 40%;
             height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 0 4rem 0 2.5rem;
             min-height: 0;
+            color: white;
+            grid-gap: 3rem;
         }
 
         #content>div>* {
@@ -151,18 +160,12 @@
             box-shadow: 1px 5px 10px -6px #a5a5a5;
         }
 
-        .btnP {
-            background: #00070E;
-            border: none;
-            color: white;
-        }
 
         .btnS {
-            margin-left: 1rem;
-            border: 2px solid #00070E;
-            background: white;
-            color: #00070E !important;
-
+            border: 2px solid white;
+            /* background: white; */
+            color: white !important;
+            text-align: center;
         }
 
         .buttons {
@@ -170,31 +173,72 @@
             margin-bottom: 0;
         }
 
-        @media (min-aspect-ratio: 6/5) and (max-width: 1050px) {
-            .buttons{
-                flex-direction: column;
-            }
-            .btnS{
-                margin: 1rem 0 0 0;
-            }
-        }
+    
+        #clockdiv{
+        font-family: DM Mono;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 113.42%;
+        letter-spacing: 5vw;
+        color: white;
+        text-indent:-5vw;;
+        direction:rtl;
+        
+    }
 
-        @media (max-width: 600px) {
-            body {
-                border: 0;
-            }
-        }
+    #planet{
+        position: fixed;
+        top: 80vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200vw;
+        height: 200vw;
+        /* height: auto; */
+        max-width: unset;
+        opacity: 0.7;
+        max-height: unset;
+       
+        
+    }
 
+    #planet img{
+        -webkit-animation: infiniteRotate 180s linear infinite; /* Safari */
+        animation: infiniteRotate 180s linear infinite;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin:auto;
+    }
 
-        @media (max-aspect-ratio: 6/5) {
+    #clockdiv > span{
+        color:#E00238;
+    }
+
+    @-webkit-keyframes infiniteRotate {    
+         0% { -webkit-transform: rotate(0deg); }
+         100% { -webkit-transform: rotate(360deg); }
+    }
+    /* Standard syntax */
+    @keyframes infinite-rotate {  
+         0% { -webkit-transform: rotate(0deg); }
+         100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @media (max-width: 700px) {
+
+#planet{
+
+}
+    }
+        @media (max-width: 950px) {
+
+            #planet{
+   
+}
             
             #container {
                 flex-direction: column-reverse;
-            }
-
-            #heroImage {
-                width: 100%;
-                height: 100%;
             }
 
             #content {
@@ -203,7 +247,8 @@
                 align-items: center;
                 justify-content: flex-start;
                 padding: 5rem 2.5rem;
-                filter: invert(1);
+                grid-gap: 1rem;
+
             }
 
             #content>div>* {
@@ -216,82 +261,90 @@
 
             #logo {
                 max-height: 4rem;
+                margin: auto;
             }
 
-             .buttons {
+            #title {
+                width: 60vw;
+                max-width: unset;
+                max-height: 40px;
+            }
+
+             .btnS {
                 margin-bottom: 0rem !important;
+                width: auto;
+                max-width: unset;
             }
 
-            /*
-            #content > div{
-            display: flex;
-            flex-direction: column;
-            align-content: flex-end;
-                justify-content: flex-start;
-        }
-*/
-
-            #content>div {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-            }
-
-
-        }
-
-        @media (max-width: 600px) and (max-aspect-ratio: 6/5) {
-            body {
-                border: 0;
-            }
-
-            #content>div {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-            }
-
-            #enter {
-                max-height: 1.5rem;
-            }
-
-            #logo {
-                max-height: 4rem;
+            #clockdiv{
+                letter-spacing: 4vw;
+                text-indent:-4vw;
+                font-size: 2rem;
             }
         }
 
-        video::-internal-media-controls-overlay-cast-button {
-    display: none;
-}
+ 
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <section id="heroImage">
-            <video alt="Spinning gif of an astronaut" poster="assets/poster.png" autoplay muted loop>
-                <source src="assets/moonwalk.webm"  type="video/webm">
-                <source src="assets/moonwalk.mp4"  type="video/mp4">
-                  Your browser does not support the video tag.
+    <img id="logo" height="50px" alt="5th Dimension" src="assets/5d_logo_WW.svg" />
 
-            </video>
-        </section>
+    <div id="container">
 
         <section id="content">
-            <div>
-               <img id="enter" alt="Enter The" src="assets/Enter%20the2.svg" />
-                <img id="logo" alt="5th Dimension" src="assets/5d_logo_BB.svg" />
-                <div class="buttons">
-                    <!-- <a href="#" id="my-notification-button" class="btnP">Sub to Notifications</a> -->
-
-                    <a target="/" href="https://twitter.com/Enter5D" class="btnS">Follow us on Twitter</a></div>
-            </div>
+                <img id="title" height="50px" alt="5th Dimension" src="assets/Title.svg" />
+                
+                <h2 id="clockdiv">
+                      <span class="hours">??</span>:<span class="minutes">??</span>:<span class="seconds">??</span>                    
+                </h2>
+                
+                    <a target="/" href="https://twitter.com/Enter5D" class="btnS">Get Updates on Twitter</a>
         </section>
     </div>
+    <div id="planet"> <img  alt="Planet" src="assets/planet2.svg" /></div>
 
-   
+   <script>
+function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const hoursSpan = clock.querySelector('.hours');
+  const minutesSpan = clock.querySelector('.minutes');
+  const secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+
+const deadline = 'March 28 2021 12:00:00 GMT+1000';
+initializeClock('clockdiv', deadline);
+
+   </script>
 </body></html>
