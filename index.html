@@ -1,386 +1,389 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>5TH DIMENSION</title>
-    <meta name="description" content="Stay tuned">
+    <meta name="description" content="Stay tuned" />
 
     <!-- Facebook / OpenGraph -->
     <meta property="og:url" content="http://5D.co" />
     <meta property="og:title" content="5TH DIMENSION" />
     <meta property="og:description" content="Stay tuned" />
     <meta property="og:site_name" content="5TH DIMENSION" />
-    <meta property="og:type" content="website" /> <!-- website is deafult -->
-    <meta property="og:locale" content="en_US" /> <!-- en_US is deafult -->
+    <meta property="og:type" content="website" />
+    <!-- website is deafult -->
+    <meta property="og:locale" content="en_US" />
+    <!-- en_US is deafult -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="assets/countdown.min.js" rel="script">
+    <link href="assets/countdown.min.js" rel="script" />
 
     <!--  Favicons: -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!--[if lt IE 9]>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+      ></script>
     <![endif]-->
 
     <style>
-        * {
-            box-sizing: border-box;
-            clear: both;
-            flex-shrink: 1;
-        }
+              * {
+                  box-sizing: border-box;
+                  clear: both;
+                  flex-shrink: 1;
+              }
 
-        html{
-            height: 100%;
-    width: 100%;
-    overflow: hidden;
-        }
+              html{
+                  height: 100%;
+          width: 100%;
+          overflow: hidden;
+              }
 
-        body {
-            box-sizing: border-box;
-            position: relative;
-            height: 100vh;
-            width: 100vw;
-            margin: auto;
-            padding: 0;
-            overflow: hidden;
-            max-height: -webkit-fill-available;
-            /* border: 16px solid #010001; */
-            background: #010001;
-            padding: 3rem;
-            /* background: url('assets/background.png');
-            background-size: cover; */
-            font-family: 'DM Sans', sans-serif;
-           
-        }
+              body {
+                  box-sizing: border-box;
+                  position: relative;
+                  height: 100vh;
+                  width: 100vw;
+                  margin: auto;
+                  padding: 0;
+                  overflow: hidden;
+                  max-height: -webkit-fill-available;
+                  /* border: 16px solid #010001; */
+                  background: #010001;
+                  padding: 4rem;
+                  /* background: url('assets/background.png');
+                  background-size: cover; */
+                  font-family: 'DM Sans', sans-serif;
 
-        #container {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            transform-style: preserve-3d;
-            user-select: none;
-            -moz-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -o-user-select: none;
-        }
+              }
 
-        img,
-        video {
-            height: auto;
-            max-width: 100%;
-            max-height: 100%;
-            position: relative;
-            display: block;
-            transform-style: preserve-3d user-select: none;
-            -moz-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -o-user-select: none;
-        }
+              #container {
+                  height: 100%;
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  position: relative;
+                  transform-style: preserve-3d;
+                  user-select: none;
+                  -moz-user-select: none;
+                  -khtml-user-select: none;
+                  -webkit-user-select: none;
+                  -o-user-select: none;
+                  overflow: hidden;
+                  background: black;
+              }
 
-        .centered {
-            max-height: 55vh;
-            max-width: 70vw;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            display: flex;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            justify-content: center;
-            align-items: center;
-            will-change: transform;
-            color: white;;
-        }
+              img,
+              video {
+                  height: auto;
+                  max-width: 100%;
+                  max-height: 100%;
+                  position: relative;
+                  display: block;
+                  transform-style: preserve-3d user-select: none;
+                  -moz-user-select: none;
+                  -khtml-user-select: none;
+                  -webkit-user-select: none;
+                  -o-user-select: none;
+              }
 
-        #heroImage {
-            background: #010001;
-            width: 60%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 0;
-        }
+              .centered {
+                  max-height: 55vh;
+                  max-width: 70vw;
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  display: flex;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  justify-content: center;
+                  align-items: center;
+                  will-change: transform;
+                  color: white;;
+              }
 
-        #content {
-            width: 40%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 4rem 0 2.5rem;
-            min-height: 0;
-            color: white;
-            grid-gap: 3rem;
-        }
+              #content {
+                  width: 40%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  min-height: 0;
+                  color: white;
+                  grid-gap: 3rem;
+              }
 
-        #content>div>* {
-            margin-bottom: 2.5rem;
-        }
+              #content>div>* {
+                  margin-bottom: 2.5rem;
+              }
 
 
-        button,
-        a {
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 11px 24px;
-            font-family: 'DM Sans', sans-serif;
-            transition: all 0.1s ease-out;
-            box-shadow: 0px 0px 10px -6px #a5a5a5;
-            text-decoration: none;
-        }
+              button,
+              a {
+                  border-radius: 4px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 11px 24px;
+                  font-family: 'DM Sans', sans-serif;
+                  transition: all 0.1s ease-out;
+                  box-shadow: 0px 0px 10px -6px #a5a5a5;
+                  text-decoration: none;
+              }
 
-        button:hover,
-        a:hover {
-            transform: translateY(-3px);
-            cursor: pointer;
-            box-shadow: 1px 5px 10px -6px #a5a5a5;
-        }
+              button:hover,
+              a:hover {
+                  transform: translateY(-3px);
+                  cursor: pointer;
+                  box-shadow: 1px 5px 10px -6px #a5a5a5;
+              }
 
 
-        .btnS {
-            border: 2px solid white;
-            /* background: white; */
-            color: white !important;
-            text-align: center;
-            animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-    animation-fill-mode:forwards;
-    background: #010001;
-        }
+              .btnS {
+                  border: 2px solid white;
+                  /* background: white; */
+                  color: white !important;
+                  text-align: center;
+                  animation-name: fadeIn;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in-out;
+          animation-duration: 3s;
+          animation-fill-mode:forwards;
+          background: #010001;
+              }
 
-        .buttons {
-            display: flex;
-            margin-bottom: 0;
-        }
+              .buttons {
+                  display: flex;
+                  margin-bottom: 0;
+              }
 
-    
-        #clockdiv{
-        font-family: DM Mono;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2.5rem;
-        line-height: 113.42%;
-        letter-spacing: 5vw;
-        color: white;
-        text-indent:-5vw;;
-        direction:rtl;
-        
-    }
 
-    #planet{
-        position: fixed;
-        top: 80vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200vw;
-        height: 200vw;
-        /* height: auto; */
-        max-width: unset;
-        /* opacity: 0.7; */
-        max-height: unset;
-        animation-name: fadeIn;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        animation-duration: 4s;
-        animation-fill-mode:forwards;
-        pointer-events: none;
-        z-index: -1;
-        
-    }
 
-    #planet img{
-        -webkit-animation: infiniteRotate 800s linear infinite; /* Safari */
-        animation: infiniteRotate 800s linear infinite;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin:auto;
-    }
+          .planet{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              /* height: auto; */
+              max-width: unset;
+              /* opacity: 0.7; */
+              max-height: unset;
+              animation-name: fadeIn;
+              animation-iteration-count: 1;
+              animation-timing-function: ease-in-out;
+              animation-duration: 3s;
+              animation-fill-mode:forwards;
+              pointer-events: none;
+              z-index: -1;
+            aspect-ratio: 1 / 1;
 
-    #title{
-        animation-name: fadeIn;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        animation-duration: 1s;
-        animation-fill-mode:forwards;
-    }
+          }
 
-    #clockdiv{
-        animation-name: fadeIn;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-        animation-duration: 2s;
-        animation-fill-mode:forwards;
-    }
+          @media (max-aspect-ratio: 1/1) {
+                .planet{
+                     height: 140vh;
+                }
+          }
 
-    #clockdiv > span{
-        color:#E00238;
-    }
+          @media (min-aspect-ratio: 1/1) {
+                .planet{
+                     height: 140vw;
+                }
+          }
 
-    @-webkit-keyframes infiniteRotate {    
-         0% { -webkit-transform: rotate(0deg); }
-         100% { -webkit-transform: rotate(360deg); }
-    }
-    /* Standard syntax */
-    @keyframes infinite-rotate {  
-         0% { -webkit-transform: rotate(0deg); }
-         100% { -webkit-transform: rotate(360deg); }
-    }
 
-    @media (max-width: 700px) {
+          .planet img{
+              -webkit-animation: infiniteRotate 100s linear infinite; /* Safari */
+              animation: infiniteRotate 100s linear infinite;
+              position: relative;
+              width: 100%;
+              height: 100%;
 
-#planet{
+              margin:auto;
+          }
 
-}
-    }
-        @media (max-width: 950px) {
+          .planet .img2{
+              -webkit-animation: infiniteRotate 100s linear infinite reverse; /* Safari */
+              animation: infiniteRotate 100s linear infinite reverse;
+              opacity: 0.3;
+          }
 
-            #planet{
-   
-}
-            
-            #container {
-                flex-direction: column-reverse;
-            }
+          #title{
+              animation-name: fadeIn;
+              animation-iteration-count: 1;
+              animation-timing-function: ease-in-out;
+              animation-duration: 2s;
+              animation-fill-mode:forwards;
+              width: 5rem;
+          }
 
-            #content {
-                width: 100%;
-                height: auto;
-                align-items: center;
-                justify-content: flex-start;
-                padding: 5rem 2.5rem;
-                grid-gap: 1rem;
+          #clockdiv{
+              animation-name: fadeIn;
+              animation-iteration-count: 1;
+              animation-timing-function: ease-in-out;
+              animation-duration: 2s;
+              animation-fill-mode:forwards;
+          }
 
-            }
+          #clockdiv > span{
+              color:#E00238;
+          }
 
-            #content>div>* {
-                margin-bottom: 2rem;
-            }
+          @-webkit-keyframes infiniteRotate {
+               0% { -webkit-transform: rotate(0deg); }
+               100% { -webkit-transform: rotate(360deg); }
+          }
+          /* Standard syntax */
+          @keyframes infinite-rotate {
+               0% { -webkit-transform: rotate(0deg); }
+               100% { -webkit-transform: rotate(360deg); }
+          }
 
-              #enter {
-                max-height: 1.5rem;
-            }
 
-            #logo {
-                max-height: 4rem;
-                margin: auto;
-            }
+              @media (max-width: 950px) {
 
-            #title {
-                width: 60vw;
-                max-width: unset;
-                max-height: 40px;
-            }
 
-             .btnS {
-                margin-bottom: 0rem !important;
-                width: auto;
-                max-width: unset;
-            }
 
-            #clockdiv{
-                letter-spacing: 4vw;
-                text-indent:-4vw;
-                font-size: 2rem;
-            }
-        }
-        @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
- 
+                  #container {
+                      flex-direction: column-reverse;
+                  }
+
+                  #content {
+                      width: 100%;
+                      height: auto;
+                      align-items: center;
+                      justify-content: flex-start;
+                      padding: 5rem 2.5rem;
+                      grid-gap: 1rem;
+
+                  }
+
+                  #content>div>* {
+                      margin-bottom: 2rem;
+                  }
+
+                    #enter {
+                      max-height: 1.5rem;
+                  }
+
+                  #logo {
+                      max-height: 4rem;
+                      margin: auto;
+                  }
+
+
+                   .btnS {
+                      margin-bottom: 0rem !important;
+                      width: auto;
+                      max-width: unset;
+                  }
+
+
+              }
+              @keyframes fadeIn {
+          0% {
+              opacity: 0;
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+
+      @media (max-width: 650px){
+          body{
+              padding:2rem;
+          }
+
+           @media (max-aspect-ratio: 1/1) {
+                .planet{
+                     height: 180vh;
+                }
+          }
+
+          @media (min-aspect-ratio: 1/1) {
+                .planet{
+                     height: 180vw;
+                }
+          }
+
+          #title{
+              width:3rem;
+          }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <img id="logo" height="50px" alt="5th Dimension" src="assets/5d_logo_WW.svg" />
-
+  <body>
     <div id="container">
+      <section id="content">
+        <!-- <img
+          id="title"
+          height="50px"
+          alt="Planetfall in"
+          src="assets/Title.svg"
+        /> -->
 
-        <section id="content">
-                <img id="title" height="50px" alt="Planetfall in" src="assets/Title.svg" />
-                
-                <h2 id="clockdiv">
-                      <span class="hours">??</span>:<span class="minutes">??</span>:<span class="seconds">??</span>                    
-                </h2>
-                
-                    <a target="/" href="https://twitter.com/Enter5D" class="btnS">Get Updates on Twitter</a>
-        </section>
+        <svg
+          id="title"
+          viewBox="0 0 45 53"
+          fill="white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.0390625 0.448268H3.77368L6.19613 18.7176H6.26342L8.68587 0.448268H12.084L8.51765 23.9999H3.60545L0.0390625 0.448268Z"
+          />
+          <path
+            d="M19.1456 24.3363C17.3287 24.3363 15.9381 23.8204 14.9736 22.7887C14.0091 21.7569 13.5268 20.2989 13.5268 18.4148V6.03337C13.5268 4.14924 14.0091 2.69128 14.9736 1.65949C15.9381 0.627709 17.3287 0.111816 19.1456 0.111816C20.9624 0.111816 22.3531 0.627709 23.3176 1.65949C24.2821 2.69128 24.7643 4.14924 24.7643 6.03337V18.4148C24.7643 20.2989 24.2821 21.7569 23.3176 22.7887C22.3531 23.8204 20.9624 24.3363 19.1456 24.3363ZM19.1456 20.9718C20.4241 20.9718 21.0634 20.198 21.0634 18.6503V5.79785C21.0634 4.25017 20.4241 3.47633 19.1456 3.47633C17.8671 3.47633 17.2278 4.25017 17.2278 5.79785V18.6503C17.2278 20.198 17.8671 20.9718 19.1456 20.9718Z"
+          />
+          <path d="M27.2672 0.448268H30.9682V23.9999H27.2672V0.448268Z" />
+          <path
+            d="M33.74 0.448268H39.3923C41.2316 0.448268 42.6111 0.941731 43.5307 1.92866C44.4503 2.91558 44.9102 4.36232 44.9102 6.26888V18.1793C44.9102 20.0858 44.4503 21.5326 43.5307 22.5195C42.6111 23.5064 41.2316 23.9999 39.3923 23.9999H33.74V0.448268ZM39.3251 20.6354C39.9307 20.6354 40.3905 20.4559 40.7045 20.097C41.041 19.7382 41.2092 19.155 41.2092 18.3475V6.10066C41.2092 5.29317 41.041 4.70999 40.7045 4.35111C40.3905 3.99223 39.9307 3.81279 39.3251 3.81279H37.4409V20.6354H39.3251Z"
+          />
+          <path
+            d="M4.80971 29.4483H8.51068V49.6354H14.6005V52.9999H4.80971V29.4483Z"
+          />
+          <path
+            d="M19.3665 29.4483H24.3796L28.2152 52.9999H24.5142L23.8413 48.3232V48.3905H19.6357L18.9628 52.9999H15.531L19.3665 29.4483ZM23.4039 45.1942L21.7553 33.553H21.688L20.0731 45.1942H23.4039Z"
+          />
+          <path
+            d="M30.0107 29.4483H35.5958C37.5024 29.4483 38.8931 29.8969 39.7678 30.7941C40.6426 31.6688 41.08 33.0259 41.08 34.8651V35.8072C41.08 37.0184 40.8781 38.0054 40.4744 38.768C40.0931 39.5306 39.4987 40.0801 38.6912 40.4166V40.4839C40.5305 41.1119 41.4501 42.7493 41.4501 45.3961V47.4148C41.4501 49.2316 40.9678 50.6223 40.0033 51.5868C39.0613 52.5289 37.6706 52.9999 35.8313 52.9999H30.0107V29.4483ZM35.1584 39.0371C35.8986 39.0371 36.4482 38.8465 36.8071 38.4652C37.1884 38.0839 37.379 37.4446 37.379 36.5474V35.2352C37.379 34.3829 37.222 33.7661 36.908 33.3848C36.6164 33.0034 36.1454 32.8128 35.4949 32.8128H33.7117V39.0371H35.1584ZM35.8313 49.6354C36.4818 49.6354 36.9641 49.4671 37.2781 49.1307C37.5921 48.7718 37.7491 48.1662 37.7491 47.3139V45.2615C37.7491 44.1849 37.5585 43.4447 37.1772 43.0409C36.8183 42.6147 36.2127 42.4017 35.3603 42.4017H33.7117V49.6354H35.8313Z"
+          />
+        </svg>
+
+        <!-- <a target="/" href="https://twitter.com/Enter5D" class="btnS"
+          >Get Updates on Twitter</a
+        > -->
+      </section>
+      <div class="planet"> <img alt="Planet" src="assets/planet2.svg" /></div>
     </div>
-    <div id="planet"> <img  alt="Planet" src="assets/planet2.svg" /></div>
+    <div class="planet">
+      <img class="img2" alt="Planet" src="assets/planet2.svg"
+    /></div>
+
     <!-- <img  alt="stars" src="assets/stars.svg" /> -->
-
-   <script>
-function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds
-  };
-}
-
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-  const hoursSpan = clock.querySelector('.hours');
-  const minutesSpan = clock.querySelector('.minutes');
-  const secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    const t = getTimeRemaining(endtime);
-
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
-}
-
-const deadline = '2021-03-28T15:00:00+11:00';
-initializeClock('clockdiv', deadline);
-
-   </script>
-</body></html>
+  </body></html
+>
